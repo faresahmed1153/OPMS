@@ -1,0 +1,242 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(245, 245, 245, 0.459);
+  overflow: hidden;
+   width: 100%;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .container {
+   padding: 0px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 20px 6px black;
+    -webkit-box-shadow: 0px 8px 20px 6px black;
+    max-width: 98%;
+    min-width: 98%;
+  }
+label{
+ display:inline;
+ padding-top: 50px;
+ margin: 10px;
+background: none;
+outline: none;
+border: none;
+line-height: 1;
+font-weight: 200;
+font-size: 1.3rem;
+color: #333;
+position: relative;
+size: 25px;
+
+}
+.doc{
+
+ padding-left: 200px;
+}
+.add-my-schadual {
+padding-top:5px;
+ text-align: center;
+ 
+}
+
+input{
+ padding: 20px;
+ margin: 16px;
+ position: relative;
+ text-align: center;
+  background-color: white;
+}
+.in{
+ border: none;
+background-color: white;
+ display:inline;
+  padding-top: 50px;
+margin: 10px;
+background: none;
+outline: none;
+font-weight: 200;
+font-size: 1.1rem;
+
+size: 25px;
+
+}
+
+button{
+  margin: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #5995fd	;
+  color: white;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: hidden;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+
+}
+button:hover{
+ background-color: #5995fd;
+ color: white;
+border: hidden;
+}
+.ca{
+ border: none;
+ background-color: #5995fd	;
+ border-radius: 50px;
+
+ border:  none;
+ outline: none;
+ border-radius: 49px;
+ cursor: pointer;
+
+ color:#fff;
+ text-transform: uppercase;
+ font-weight: 600;
+ margin: 10px 0;
+ 
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #5995fd;
+    color: white;
+}
+.myt{
+  overflow-y: scroll;
+  height: 240px;
+margin: 10px;
+}
+
+.myt th{
+    position: sticky;
+   top:0;
+}
+.day-of-week {
+  position: relative;
+ display: inline;
+  margin: 16px;
+}
+
+.day-of-week select {
+  background-color: #5995fd;
+  color: white;
+  padding: 20px;
+  width: 150px;
+  border: none;
+  font-size: 16px;   
+  outline: none;
+  border-radius: 50px;
+}
+
+.day-of-week::before {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.day-of-week:before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.day-of-week select option {
+  padding: 30px;
+}
+option
+{
+  border: none;
+  background-color: #5995fd	;
+  border-radius: 50px;
+
+  border:  none;
+  outline: none;
+  border-radius: 49px;
+  cursor: pointer;
+  color:#fff;
+  font-weight: 300;
+  margin: 10px 0;
+}
+@media (max-width: 530px) {
+body{
+  width: 100%;
+  overflow-y:auto;
+ overflow-x:  hidden;
+
+  }
+ .container{
+  margin: 0;
+   padding: 5px;
+  max-width: 98.4%;
+    min-width: 98.4%;
+    }
+.container table thead {
+}
+.myt {
+    overflow-y: scroll;
+    height: 500px;
+  }
+  
+  .container myt th {
+     top: 0;
+  }
+  .container table td {
+    
+  }
+
+
+.container table td::before {
+  font-weight: bold;
+}
+
+label{
+ display:block;
+  size: 25vw;
+  left: 0;
+  padding-left: 0;
+}
+
+.doc{
+ padding: 0px;
+}
+.bu{
+padding-right: 10%;}
+div select{
+align-content: center;
+}
+.day-of-week{
+margin: 0px;
+
+}
+button{
+ padding-left: 50px;
+}
+}

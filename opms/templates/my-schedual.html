@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='my-schedual.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src=“script.js”></script>
+  <title>My Schedule</title>
+
+</head>
+
+<body>
+  {% block content %}
+  <div class="container">
+    <div class="add-my-schadual">
+      <label>Medical Specialty: </label>
+      <input type="text" value="{{doctor.specialty}}" disabled="disabled" class="in">
+      <label class="doc">Doctor Name :</label>
+      <input type="text" value="{{doctor.name}}" disabled="disabled" class="in">
+
+      <div class="my-schadual">
+        <div class="myt">
+          <table>
+            <tr>
+              <th>Day</th>
+              <th>Date</th>
+              <th>From time</th>
+              <th>To time</th>
+              <th>room number</th>
+            </tr>
+            {% for item in doctor.schedule%}
+            <tr>
+              <td>{{item.day}}</td>
+              <td>{{item.month}}</td>
+              <td>{{item.from_time}}</td>
+              <td>{{item.to_time}}</td>
+              <td>{{item.room_no}}</td>
+            </tr>
+            {% endfor %}
+
+
+          </table>
+        </div>
+
+      </div>
+</body>
+
+</html>
+{% endblock content %}

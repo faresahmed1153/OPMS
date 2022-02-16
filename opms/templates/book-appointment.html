@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='book-appointment.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type=text/javascript src="{{
+    url_for('static', filename='table.js') }}"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+
+
+
+  <title>Book Appointment</title>
+
+</head>
+
+<body>
+
+
+  {% block content %}
+
+  <div class="container">
+    <form name="book" method="POST" action="">
+
+      <div class="book-appointment">
+        <label>Medical Specialties:</label>
+        <div class="medical-specialties" style="width:200px;">
+          <select name="sp">
+            <option hidden="hidden">medical specialties</option>
+            {% for item in specialty%}
+            <option value="{{item.specialties}}">{{item.specialties}}</option>
+            {% endfor %}
+
+          </select>
+        </div>
+        <label class="doc">Doctor Name:</label>
+        <div class="medical-specialties" style="width:200px;">
+          <select name="doc">
+            <option class="o" hidden="hidden">Doctor</option>
+
+            {%for item in doctor%}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+
+          </select>
+        </div>
+        <br><br><br>
+        <button class="ser" type="submit">Search</button>
+        <br><br><br><br>
+        <div style="overflow: scroll" class="myt">
+          <table>
+
+            <thead>
+
+              <th>Doctor Name</th>
+              <th>Medical Specialties</th>
+              <th>price</th>
+              <th>Day</th>
+              <th>Date</th>
+              <th>From time</th>
+              <th>To time</th>
+              <th>room number</th>
+
+              <th>Book</th>
+            </thead>
+            <tbody>
+
+
+              {% for item in doc%}
+              {%for item2 in item.schedule%}
+              <tr>
+
+                <td>{{item.name}}</td>
+                <td>{{item.specialty}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item2.day}}</td>
+                <td>{{item2.month}}</td>
+                <td>{{item2.from_time}}</td>
+                <td>{{item2.to_time}}</td>
+                <td>{{item2.room_no}}</td>
+
+                <td><button class="use-address" type="submit">Book</button> </td>
+
+
+
+
+              </tr>
+              {% endfor %}
+              {% endfor %}
+
+
+          </table>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+</html>
+{% endblock content %}

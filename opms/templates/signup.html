@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width" , initial-scale="1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+
+<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+
+<title>Sign in & Sign up Form</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="container">
+    <form name="register" method="POST" action="">
+      {{ form.hidden_tag() }}
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign Up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              {% if form.name.errors %}
+              {{ form.name(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.name.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.name(class="form-control form-control-lg") }}
+              {% endif %}
+
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              {% if form.email.errors %}
+              {{ form.email(class="form-control form-control-lg is-invalid" ) }}
+              <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.email(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              {% if form.password.errors %}
+              {{ form.password(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.password(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              {% if form.confirm_password.errors %}
+              {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.confirm_password.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %}
+              {{ form.confirm_password(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="input-field">
+              <i class="fas fa-child"></i>
+              <select name="select" id="role" class="c">
+                <option class="o">patient</option>
+                <option class="o">doctor</option>
+                <option class="o">admin</option>
+              </select>
+
+
+            </div>
+
+            <input type="submit" value="Sign Up" class="btn solid">
+
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+
+            <p>
+              Already have an account -->
+            </p>
+            <a href="login">Sign
+              in</a>
+          </div>
+          <img src="/static/img2.svg" class="image" alt="" />
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+{% endblock content %}

@@ -1,0 +1,240 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+   width: 100%;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .container {
+   padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 20px 6px black;
+    -webkit-box-shadow: 0px 8px 20px 6px black;
+    height: 550px;
+    max-width: 98%;
+    min-width:98%;
+  }
+  label{
+   display:inline;
+   font-size:1.5rem;
+   color: #444;
+   margin-bottom: 10px;
+   padding-right: 10px;
+  
+  }
+  .doc{
+  
+   padding-left: 200px;
+  }
+  .book-appointment {
+  padding-top: 60px;
+   text-align: center;
+   
+  }
+  
+  input{
+  
+   padding: 20px;
+   margin: 16px;
+   position: relative;
+   text-align: center;
+   
+  }
+  
+  .medical-specialties {
+    position: relative;
+   display: inline;
+  }
+  
+  .medical-specialties select {
+    background:#5995fd;
+    color: #fff;
+    padding: 10px;
+    width: 270px;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    box-shadow: rgb(83, 83, 255);
+    outline: none;
+    border-radius: 50px;
+    -webkit-appearance: none;
+    margin: 0;
+    text-align: center;
+    
+  }
+  
+  .medical-specialties::before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+  }
+  
+  .medical-specialties:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .medical-specialties select option {
+    padding: 30px;
+  }
+  .ser{
+    margin: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #5995fd	;
+    color: whitesmoke;
+    width: 150px;
+    height: 49px;
+    border:  none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+  
+  }
+  .ser:hover{
+   background-color: #5995fd;
+   color: white;
+  border: hidden;
+  }
+  
+  button{
+    color: black;
+    font-size: 16px;
+    padding: 6px 12px;
+    border: hidden;
+    cursor: pointer;
+    border-radius: 9px;
+    outline: none;
+    border:none;
+  color: #5995fd;
+  }
+  button:hover{
+   background-color: #5995fd;
+   color: white;
+  border: hidden;
+  }
+  .ca{
+   border: hidden;
+   background-color: #56A5EC	;
+  }
+  .myt{
+    overflow-y: scroll;
+    height: 300px;
+  }
+  
+  .myt th{
+      position: sticky;
+     top: 0;
+  }
+  table {
+      border-collapse: collapse;
+      width: 100%;
+      
+  }
+  
+  th, td {
+      text-align: center;
+      padding: 8px;
+      
+  }
+  
+  
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+      background-color: #5995fd;
+      color: white;
+  }
+  select{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    
+
+}
+option
+{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;       
+    
+}
+
+
+
+@media (max-width: 580px) {
+  body{
+  width: 100%;
+  overflow-y:auto;
+ overflow-x:  hidden;
+
+  }
+ .container{
+  margin: 0;
+   padding: 5px;
+  max-width: 98.4%;
+    min-width: 98.4%;
+    }
+  .s{
+   padding-right: 10%;
+  }
+ 
+  .container table thead {
+  }
+.myt {
+    overflow-y: scroll;
+    height: 220px;
+  }
+  
+  .container myt th {
+      position: sticky;
+     top: 0;
+  }
+  .container table td {
+    
+  }
+
+  .container table td::before {
+    font-weight: bold;
+  }
+    label  {
+     display: block;
+   font-size:4vw;
+   text-align: center;
+  
+}
+.doc{
+  
+   padding-left: 0px;
+
+   
+  }
+}

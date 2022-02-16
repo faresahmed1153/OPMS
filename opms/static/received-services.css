@@ -1,0 +1,114 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(245, 245, 245, 0.678);
+  overflow: hidden;
+   width: 100%;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .container {
+   padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 20px 6px black	;
+    -webkit-box-shadow: 0px 8px 20px 6px black	;
+    max-width: 98%;
+    min-width: 98%;
+    
+  }
+  label{
+      padding-top: 50px;
+      margin: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #333;
+    position: relative;
+    
+    
+  
+  }
+  
+  .received-services {
+  padding-top: 20px;
+   text-align: center;
+  }
+  table {
+      border-collapse: collapse;
+      width: 100%;
+   
+  }
+  
+  th, td {
+      text-align: center;
+      padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+      background-color: #5995fd;
+      color: white;
+  }
+  .myt{
+    overflow-y: scroll;
+    height: 400px;
+   
+  }
+  
+  .myt th{
+      position: sticky;
+     top:0;
+  }
+  input{
+   border: none;
+   text-align: center;
+  color: #4d84e2;
+   font-size: 30px;
+   background-color: white;
+  }
+  
+   @media (max-width: 580px) {
+body{
+  width: 100%;
+  overflow-y:auto;
+ overflow-x:  hidden;
+
+  }
+ .container{
+  max-width: 98%;
+    min-width: 98%;
+    }
+ label{
+  display: inline-block;
+ }
+  .container table thead {
+  }
+.myt {
+    overflow-y: scroll;
+    
+  }
+  
+  .container myt th {
+      position: sticky;
+     top: 0;
+  }
+  .container table td {
+    
+  }
+
+  .container table td::before {
+    content: attr(data-heading) ": ";
+    font-weight: bold;
+  }
+}

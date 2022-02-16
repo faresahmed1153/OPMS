@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width" , initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='token_expired.css') }}">
+<title>Token</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <div class="sign-in-form">
+                    <h2 class="title">Sorry, your token expired!
+                    </h2>
+                    <h3 class="title2"> We'll need to signup again!</h3>
+
+                    <button class="btn solid" type="submit"
+                        onclick="location.href = 'https://aqueous-tundra-43725.herokuapp.com/signup';">
+                        signup</button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

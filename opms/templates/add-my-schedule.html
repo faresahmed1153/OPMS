@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='add-my-schedule.css') }}">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src=“script.js”></script>
+
+
+  <title>Add My Schadual</title>
+
+</head>
+
+<body>
+  {% block content %}
+
+  <div class="container">
+    <form name="add_my_schedual" id="add_my_schedual" method="POST" action="">
+
+      <div class="add-my-schadual">
+        <label>Medical Specialty : </label>
+        <input type="text" value="{{doctor.specialty}}" disabled="disabled" class="in">
+        <label class="doc">Doctor Name :</label>
+        <input type="text" value="{{doctor.name}}" disabled="disabled" class="in">
+        <br>
+        <label>Set your appointments:</label><br><br>
+        <div class="day-of-week" style="width:200px;">
+
+          <select name="rep">
+            <option hidden="hidden" value="">Repetition</option>
+            <option value="Every">Every</option>
+            <option value="Just">Just</option>
+          </select>
+        </div>
+        <div class="day-of-week">
+          <select name="day">
+            <option hidden="hidden" value="">Day</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+          </select>
+
+        </div>
+        <input type="date" name="month" class="ca">
+        <label>From time</label>
+        <input type="time" name="fromti" id="f" class="ca">
+        <label>To time</label>
+        <input type="time" name="totime" id="t" class="ca">
+        <br>
+        <button type="submit">Add</button>
+        <br> <br> <br>
+        <div class="myt">
+          <table>
+            <tr>
+              <th>Day</th>
+              <th> Date</th>
+              <th class="t">From time</th>
+              <th class="t">To time </th>
+              <th>room number</th>
+            </tr>
+            {% for item in doctor.schedule%}
+            <tr>
+              <td>{{item.day}}</td>
+              <td>{{item.month}}</td>
+              <td>{{item.from_time}}</td>
+              <td>{{item.to_time}}</td>
+              <td>{{item.room_no}}</td>
+            </tr>
+            {% endfor %}
+
+          </table>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+{% endblock content %}

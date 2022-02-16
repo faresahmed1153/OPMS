@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='received-services.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src=“script.js”></script>
+  <title>Services</title>
+
+</head>
+
+<body>
+  {% block content %}
+
+  <div class="container">
+
+    <div class="received-services">
+      <div class="myt">
+        <table>
+          <tr>
+            <th>Services Name</th>
+            <th>Services Price</th>
+            <th>Discount</th>
+            <th>Total</th>
+          </tr>
+
+          {% for item in ps.services%}
+          <tr>
+            <td>{{item.Service_name}}</td>
+            <td>{{item.Service_price}}</td>
+            <td>{{item.discount}}</td>
+            <td>{{item.total}}</td>
+
+          </tr>
+          {% endfor %}
+
+        </table>
+
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+{% endblock content %}

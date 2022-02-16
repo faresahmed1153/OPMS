@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="html">
+  <link rel="stylesheet" href="{{ url_for('static', filename='my-appointment.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src=“script.js”></script>
+  <title>My Appointment</title>
+
+</head>
+
+<body>
+  {% block content %}
+
+  <div class="container">
+
+    <div class="my-appointment">
+      <div class="myt">
+        <table>
+
+          <tr>
+            <th>Doctor Name</th>
+            <th>Medical Specialties</th>
+            <th>Day</th>
+            <th>Date</th>
+            <th>From time</th>
+            <th>to time</th>
+            <th>room number</th>
+            <th>Price</th>
+
+          </tr>
+
+          {% for item in ps.schedule%}
+          <tr>
+            <td>{{item.doctor_name}}</td>
+            <td>{{item.MedicalSpecialtiy}}</td>
+            <td>{{item.day}}</td>
+            <td>{{item.month}}</td>
+            <td>{{item.from_time}}</td>
+            <td>{{item.to_time}}</td>
+            <td>{{item.room_no}}</td>
+            <td>{{item.price}}</td>
+          </tr>
+          {% endfor %}
+
+
+
+
+        </table>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</body>
+
+</html>
+{% endblock content %}
